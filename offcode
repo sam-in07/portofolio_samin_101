@@ -1,0 +1,15 @@
+
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-container img {
+    width: 90%;
+    max-width: 600px; /* increased to better match 1024px image */
+    height: auto;
+    margin-top: 20px;
+  }
+}
