@@ -13,6 +13,37 @@ header {
 
 .header-list {
   margin: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  font-size: 24px;
+  color: #000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(20deg);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
 }
 
 .div-list {
@@ -913,4 +944,187 @@ body {
   html, body {
     overflow-x: hidden;
   }
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-theme .ul-list {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .ul-list li a {
+  color: #e0e0e0;
+}
+
+body.dark-theme .ul-list li.active {
+  background-color: #474af0;
+}
+
+body.dark-theme .ul-list li.active a,
+body.dark-theme .ul-list li.active i {
+  color: white;
+}
+
+body.dark-theme .theme-toggle {
+  background-color: #2d2d2d;
+  color: #ffd700;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .home-p {
+  background-color: rgba(128, 128, 128, 0.4);
+  color: #e0e0e0;
+}
+
+body.dark-theme .info-home h1,
+body.dark-theme .info-home h3,
+body.dark-theme .about h1,
+body.dark-theme .about h2,
+body.dark-theme .project h1,
+body.dark-theme .services h1,
+body.dark-theme .contact h1 {
+  color: #e0e0e0;
+}
+
+body.dark-theme .info-p,
+body.dark-theme .about p,
+body.dark-theme .project p,
+body.dark-theme .services p,
+body.dark-theme .contact p {
+  color: #b0b0b0;
+}
+
+body.dark-theme .info-p2,
+body.dark-theme .contact-item {
+  color: #c0c0c0;
+}
+
+body.dark-theme .btn-home1 {
+  background-color: #474af0;
+}
+
+body.dark-theme .btn-home2 {
+  border-color: #e0e0e0;
+  color: #e0e0e0;
+}
+
+body.dark-theme .btn-home2:hover {
+  background-color: #474af0;
+  color: white;
+}
+
+body.dark-theme hr {
+  color: #444;
+}
+
+body.dark-theme .follow ul a {
+  color: #e0e0e0;
+}
+
+body.dark-theme .c1 {
+  border-color: #444;
+  background-color: #252525;
+  color: #e0e0e0;
+}
+
+body.dark-theme .c1:hover {
+  border-color: #ff3333;
+  background-color: #333;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .project-card {
+  background: #2d2d2d;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .project-card h3 {
+  color: #5b9bf5;
+}
+
+body.dark-theme .project-card p {
+  color: #b0b0b0;
+}
+
+body.dark-theme .skills a {
+  background: #1e3a8a;
+  color: #93c5fd;
+}
+
+body.dark-theme .skills a:hover {
+  background: #1e40af;
+}
+
+body.dark-theme .btn {
+  background: #474af0;
+}
+
+body.dark-theme .btn:hover {
+  background: #5966d9;
+}
+
+body.dark-theme .service-card {
+  background: #2d2d2d;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .service-card h3 {
+  color: #5b9bf5;
+}
+
+body.dark-theme .service-card p {
+  color: #b0b0b0;
+}
+
+body.dark-theme .service-card:hover h3,
+body.dark-theme .service-card:hover p {
+  color: #fff;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+  border-color: #474af0;
+  background-color: #333;
+}
+
+body.dark-theme .btn-send {
+  background: #474af0;
+}
+
+body.dark-theme .btn-send:hover {
+  background: #5966d9;
+}
+
+body.dark-theme .footer {
+  background-color: #0d0d0d;
+  border-top: 1px solid #333;
+}
+
+body.dark-theme .social-link {
+  background: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-theme .social-link:hover {
+  color: #fff;
+}
+
+body.dark-theme #loading-screen {
+  background-color: #0d0d0d;
+}
+
+body.dark-theme #back-to-top {
+  background: #474af0;
 }

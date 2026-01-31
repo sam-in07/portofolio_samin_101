@@ -1,6 +1,42 @@
 const navLinks = document.querySelectorAll('.ul-list li a');
 const sections = document.querySelectorAll('section');
 
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
+
+// Load theme from localStorage
+function loadTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    updateThemeIcon(true);
+  }
+}
+
+// Update theme icon
+function updateThemeIcon(isDark) {
+  const icon = themeToggle.querySelector('i');
+  if (isDark) {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  } else {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+}
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  const isDark = document.body.classList.contains('dark-theme');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  updateThemeIcon(isDark);
+});
+
+// Load theme on page load
+loadTheme();
+
 function removeActive() {
   navLinks.forEach(link => link.parentElement.classList.remove('active'));
 }
